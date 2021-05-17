@@ -1,5 +1,5 @@
-
 import { FaTimes } from 'react-icons/fa'
+import PropTypes from 'prop-types'
 
 const User = ({ user, removeUser }) => {
     return (
@@ -13,6 +13,11 @@ const User = ({ user, removeUser }) => {
             </li>
         </div>
     )
+}
+
+User.propTypes = {
+    user: PropTypes.object,
+    removeUser: PropTypes.func,
 }
 
 export default User

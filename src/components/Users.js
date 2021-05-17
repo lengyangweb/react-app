@@ -1,4 +1,5 @@
 import User from "./User"
+import PropTypes from 'prop-types'
 
 const List = ({ users, removeUser }) => {
     return (
@@ -8,6 +9,11 @@ const List = ({ users, removeUser }) => {
             )) }
         </div>
     )
+}
+
+List.propTypes = {
+    user: PropTypes.object,
+    removeUser: PropTypes.func,
 }
 
 export default List
