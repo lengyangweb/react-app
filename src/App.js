@@ -11,21 +11,16 @@ function App() {
   const [ users, setUsers ] = useState([
     { 
       id: 1, 
-      name: 'Homer', 
+      firstname: 'Homer', 
       lastname: 'Simpson', 
       age: 34 
     },
     { 
       id: 2, 
-      name: 'March', 
+      firstname: 'March', 
       lastname: 'Simpson', 
       age: 32 
-    },
-    { 
-      id: 3, 
-      name: 'Bart', 
-      lastname: 'Simpson', 
-      age: 10 }
+    }
   ]);
 
   // Remove Users
@@ -39,7 +34,7 @@ function App() {
     setUsers([...users, user]);
   }
 
-  // Toggle
+  // Toggle Form
   const toggleForm = () => {
     setshowAdd(!showAdd);
   }
@@ -59,7 +54,10 @@ function App() {
       }
       <div className="container">
         <Header title="Users List" />
-        <Users removeUser={ removeUser  } users={ users } />
+        { users.length > 0 ? 
+          <Users removeUser={ removeUser  } users={ users } /> : 
+          <span className='text'>No user on list</span>
+        }
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const User = ({ user, removeUser }) => {
     return (
         <div className="user">
             <li>
-                {`${user.name}  ${user.lastname}`} 
+                {`${user.firstname}  ${user.lastname}`} 
                 <FaTimes
                     style={{ color: 'red', cursor: 'pointer' }}
                     onClick={ () => removeUser(user.id)}

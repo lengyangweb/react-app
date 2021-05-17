@@ -1,24 +1,23 @@
 import React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types'
-import Button from './Button';
 
 const AddUsers = ({ onAdd }) => {
-    const [ firstName, setFirstname ] = useState('');
-    const [ lastName, setLastname ] = useState('');
+    const [ firstname, setFirstname ] = useState('');
+    const [ lastname, setLastname ] = useState('');
     const [ age, setAge ] = useState(0);
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if(!firstName) {
+        if(!firstname) {
             alert('Please add a name')
             return
         }
 
         // initializing a new user
         const id = Math.floor(Math.random() * 10000) + 1;
-        const newUser = { id, firstName, lastName, age };
+        const newUser = { id, firstname, lastname, age };
         onAdd(newUser);
 
         setFirstname('');
@@ -30,7 +29,7 @@ const AddUsers = ({ onAdd }) => {
         <form onSubmit={ onSubmit }>
             <div className="form-control">
                 <input 
-                    value={ firstName }
+                    value={ firstname }
                     onChange={(e) => setFirstname(e.target.value)}
                     placeholder="First Name" 
                 />
@@ -38,7 +37,7 @@ const AddUsers = ({ onAdd }) => {
             <div className="form-control">
                 
                 <input 
-                    value={ lastName }
+                    value={ lastname }
                     onChange={(e) => setLastname(e.target.value)} 
                     placeholder="Last Name" 
                 />
