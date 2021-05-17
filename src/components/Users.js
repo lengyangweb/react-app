@@ -5,7 +5,10 @@ const List = ({ users, removeUser }) => {
     return (
         <div className="users">
             { users.map(user =>  (
-                <User removeUser={removeUser} key={user.id} user={user} />
+                <User 
+                    removeUser={removeUser} 
+                    key={user.id} user={user} 
+                />
             )) }
         </div>
     )

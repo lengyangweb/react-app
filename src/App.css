@@ -9,7 +9,50 @@
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+
+.app .form-container {
+  width: 400px;
+  height: 200px;
+  border: 2px solid #444;
+  margin-top: 1rem;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app .form-container form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app .form-container .form-control {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app .form-container .form-control > input {
+  width: 80%;
+  margin-top: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.app .form-container input {
+  padding: 5px 2rem;
+  margin-top: 15px;
 }
 
 .app .container {
@@ -56,4 +99,18 @@
 .app .container .users .user li {
   display: flex;
   justify-content: space-between;
+}
+
+button {
+  padding: 8px 25px;
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: .3s ease-in;
+}
+
+button:hover {
+  opacity: 0.8;
 }
